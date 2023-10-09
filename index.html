@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2><a href="" class="nav-items">Anno</a></h2>
+            </div>
+            <div class="menu d-flex">
+                <ul>
+                    <li><a href="" class="nav-items">Home</a></li>
+                    <li>
+                        <a href="" class="nav-items">Catagory</a>
+                        <!-- <ul class="sub-menu">
+                            <li><a href="" class="nav-items">About Us</a></li>
+                            <li><a href="" class="nav-items">Our Team</a></li>
+                            <li><a href="" class="nav-items">Our Vision</a></li>
+                        </ul> -->
+                    </li>
+                    <li><a href="" class="nav-items">My Points</a></li>
+                </ul>
+                <form class="searchBox" role="search">
+                    <input class="" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-light-green" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- first pafe of the website -->
+    <section id="HomePage" class="">
+        <div class="d-flex">
+            <div class="d-inline">
+                <label for="sort_by" class="text-center p-2 pe-0 fw-medium d-inline"> Sort By: </label>
+                <div class="dropdown" id="sort_by">
+                    <button onclick="DROPDOWNFUNTION()" class="dropbtn text-center">Recently
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#" class="d-none"> Recently</a>
+                        <a href="#">Most Viewd</a>
+                        <a href="#">Most Liked</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Action-tab d-flex">
+                <a class="btn btn-light-grey text-center">
+                    Followed Catagory
+                </a>
+                <a class="btn text-center btn-grey">
+                    Create New Post
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div>
+                <div class="data_box" style="height: 25px; background-color: white;">
+                    <div class="title_data"></div>
+                    <div class="detail_data">
+                        <div class="posted_data"></div>
+                        <div class="topic_data">
+                        </div>
+                    </div>
+                    <div class="stas_box">
+                        <div class="replied_data">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                            </svg>
+                        </div>
+                        <div class="liked_data">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                            </svg>
+                        </div>
+                        <div class="view_data">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                <path
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                            </svg>
+                        </div>
+                        <div class="Recently_data">
+                            Recently
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+            <section id="form_data" style="min-height: 48vh;">
+                <a href="" class="contentPage" data-id='0'>
+                    <div class="data_box">
+                        <div class="title_data">The Great Indian War</div>
+                        <div class="detail_data">
+                            <div class="posted_data">Posted By : User</div>
+                            <div class="topic_data">
+                                <ul>
+                                    <li>Politics</li>
+                                    <li>War</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="stas_box">
+                            <div class="replied_data">12</div>
+                            <div class="liked_data">18</div>
+                            <div class="view_data">28</div>
+                            <div class="Recently_data">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512">
+                                    <path
+                                        d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
+                                </svg>
+                                Aurthur
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                
+            </section>
+
+
+            <div class="page_mover">
+                <a href="" class="">Previous</a>
+                <a href="" class="">1</a>
+                <a href="" class="">2</a>
+                <a href="" class="">3</a>
+                <a href="" class="" data-taget="dotted">..</a>
+                <a href="" class="">10</a>
+                <a href="" class="">Next</a>
+            </div>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- second page of the website -->
+
+
+
+    <section id="add_page" class="">
+        <h2>Create New Form</h2>
+        <form action="" class="add_form">
+            <div class="from_data">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="Title" maxlength="20" required>
+            </div>
+            <div class="from_data">
+                <div class="text-center">
+                    <label for="text_para">Write the the Paragraph</label>
+                </div>
+                <textarea name="text_body" id="text_para" cols="50" rows="10" required
+                    placeholder="Write the body of paragraph"></textarea>
+            </div>
+            <div class="from_data">
+                <label for="topic_input">Title</label>
+                <input type="text" name="title" id="topic_input" placeholder="Write the topic separated by ,(coma)"
+                    maxlength="20" required>
+            </div>
+            <div>
+                <button type="submit" class="Sumbit">Submit</button>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- Third page of the website -->
+
+    <section class="page">
+        <div class="showPage" data-id="0">
+            <h2 class="titleOfPage">The Great War of Inida</h2>
+            <hr>
+            <div class="contenBox">
+                <p class="paraOfPage">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat explicabo, accusantium incidunt
+                    autem temporibus praesentium eius perspiciatis quidem sequi impedit quaerat soluta tempora
+                    dignissimos fugiat non, saepe nisi ipsam neque.
+                    Repellendus labore quo quasi eos officia accusamus consequuntur dolores, totam harum, recusandae
+                    corporis velit laborum debitis laudantium nostrum molestias! Facere nihil reiciendis natus commodi
+                    distinctio dignissimos dolor quisquam odio illum.
+                    Atque, nam. Animi expedita culpa quibusdam officia aspernatur consequuntur, labore veniam vel,
+                    tenetur id eveniet facilis vitae nemo cum sapiente, neque debitis est? Optio reiciendis fugiat
+                    expedita est? Odio, reiciendis?
+                    Molestias dolor incidunt, aspernatur debitis ipsum excepturi numquam autem praesentium tenetur
+                    repudiandae, corporis mollitia expedita soluta assumenda ullam temporibus? Animi accusamus repellat
+                    harum voluptates fuga maiores nisi ipsam suscipit alias.
+                    Facere dicta fugiat debitis magni laborum nobis eaque iusto iste illum omnis velit autem quos sint
+                    ut sequi voluptatem perspiciatis dolorum sit nisi veniam, fugit doloremque officia alias.
+                    Architecto, voluptates?
+                </p>
+            </div>
+            <hr>
+            <div class="showStats">
+                <div class="reply">
+                    <button class="">
+                        50
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="">
+                    <button class="addLike" data-id="0">
+
+                        60
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-heart-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                        </svg>
+                        </a>
+                </div>
+                <div class="">
+                    <button href="">
+                        150
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            <path
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
