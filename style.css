@@ -54,55 +54,6 @@ nav {
     margin: 0px 10px 0px auto;
 }
 
-.btn {
-    margin: 0px 5px;
-    padding: 5px 15px 5px 15px;
-    border-radius: 8px;
-    border-width: 1.9px;
-    box-shadow: none;
-
-}
-.btn-light-green {
-    background-color: #fff;
-    border-color: #198754;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-}
-
-.btn-light-green:hover {
-    background-color: #198754;
-    color: #fff;
-}
-
-.btn-grey {
-    padding: 8px 15px 10px 15px;
-    color: #fff;
-    background-color: grey;
-    border: 2px solid gray;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-}
-
-.btn-grey:hover {
-    border: 2px solid gray;
-    color: black;
-    background-color: #fff;
-}
-
-.btn-light-grey {
-    border: 2px solid gray;
-    color: black;
-    background-color: #fff;
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
-    padding: 8px 15px 10px 15px;
-}
-.btn-light-grey:hover{
-    color: #fff;
-    background-color: grey;
-    border: 2px solid gray;
-}
-
 
 
 
@@ -170,7 +121,9 @@ section {
     display: block;
 }
 
-
+input[type="text"]{
+    font-size: 15px;
+}
 .data_box{
     padding: 10px;
     border-radius: 10px;
@@ -257,7 +210,7 @@ label{
     font-size: 25px;
 }
 .from_data > input{
-    width: 50vw;
+    width: 100%;
 }
 
 #text_para {
@@ -267,12 +220,12 @@ label{
 }
 
 .Sumbit{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
+    margin: 10px!important;
+    padding: 10px!important;
+    border-radius: 10px!important;
     background-color: gray;
     color: white;
-    font-size: 20px;
+    font-size: 20px!important;
 }
 
 .page{
@@ -316,6 +269,7 @@ label{
     justify-content: center;
     padding: 10px;
     border-radius: 8px;;
+    border-color:  rgb(128, 128, 128)!important;
     gap: 5px;
     background-color: rgba(128, 128, 128, 0.589);
 }
@@ -326,3 +280,59 @@ label{
 .contentPage{
     margin: 5px;
 }
+
+
+
+
+.btn {
+    margin: 0px 5px;
+    padding: 5px 15px 5px 15px;
+    border-radius: 8px;
+    border-width: 1.9px;
+    box-shadow: none;
+    cursor: pointer;
+
+}
+.btn-light-green {
+    color: inherit;
+    background-color: #fff;
+    border-color: #198754;
+    border: 2px solid #198754!important;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.btn-light-green:hover {
+    background-color: #198754;
+    color: #fff;
+}
+
+.btn-grey {
+    padding: 8px 15px 10px 15px;
+    color: #fff;
+    background-color: grey;
+    border: 2px solid gray;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+.btn-grey:hover {
+    border: 2px solid gray;
+    color: black;
+    background-color: #fff;
+}
+
+.btn-light-grey {
+    border: 2px solid gray;
+    color: black;
+    background-color: #fff;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+    padding: 8px 15px 10px 15px;
+}
+.btn-light-grey:hover{
+    color: #fff;
+    background-color: grey;
+    border: 2px solid gray;
+}
+

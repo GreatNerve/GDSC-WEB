@@ -59,7 +59,7 @@
                 <a class="btn btn-light-grey text-center">
                     Followed Catagory
                 </a>
-                <a class="btn text-center btn-grey">
+                <a class="btn text-center btn-grey newCreate">
                     Create New Post
                 </a>
             </div>
@@ -75,11 +75,12 @@
                         </div>
                     </div>
                     <div class="stas_box">
-                        <div class="replied_data">
+                        <div class="view_data">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
+                                class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                 <path
-                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                             </svg>
                         </div>
                         <div class="liked_data">
@@ -89,12 +90,11 @@
                                     d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
                             </svg>
                         </div>
-                        <div class="view_data">
+                        <div class="replied_data">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-eye-fill" viewBox="0 0 16 16">
-                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
                                 <path
-                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
                             </svg>
                         </div>
                         <div class="Recently_data">
@@ -121,9 +121,9 @@
                             </div>
                         </div>
                         <div class="stas_box">
-                            <div class="replied_data">12</div>
-                            <div class="liked_data">18</div>
                             <div class="view_data">28</div>
+                            <div class="liked_data">18</div>
+                            <div class="replied_data">12</div>
                             <div class="Recently_data">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512">
                                     <path
@@ -135,7 +135,7 @@
                     </div>
                 </a>
 
-                
+
             </section>
 
 
@@ -161,12 +161,24 @@
 
 
 
-    <section id="add_page" class="">
+    <section id="add_page" class="d-none">
         <h2>Create New Form</h2>
-        <form action="" class="add_form">
-            <div class="from_data">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Title" maxlength="20" required>
+        <hr>
+        <form id="addPage" class="add_form" action="" method="post">
+            <div style="width: 75%; max-width: 500px;">
+                <div class="from_data">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" placeholder="Title" maxlength="100" required>
+                </div>
+                <div class="from_data">
+                    <label for="topic_input">Topics</label>
+                    <input type="text" name="Topics" id="topic_input" placeholder="Write the topic separated by ,(coma)"
+                        maxlength="100" required>
+                </div>
+                <div class="from_data">
+                    <label for="author">Your Name</label>
+                    <input type="text" name="author" id="author" placeholder="Please Enter Your Name" maxlength="20">
+                </div>
             </div>
             <div class="from_data">
                 <div class="text-center">
@@ -175,12 +187,9 @@
                 <textarea name="text_body" id="text_para" cols="50" rows="10" required
                     placeholder="Write the body of paragraph"></textarea>
             </div>
-            <div class="from_data">
-                <label for="topic_input">Title</label>
-                <input type="text" name="title" id="topic_input" placeholder="Write the topic separated by ,(coma)"
-                    maxlength="20" required>
-            </div>
             <div>
+
+                <a class="Sumbit btn btn-light-green BackHome">Go Back</a>
                 <button type="submit" class="Sumbit">Submit</button>
             </div>
         </form>
@@ -189,7 +198,7 @@
 
     <!-- Third page of the website -->
 
-    <section class="page">
+    <section class="page d-none" id="sPage">
         <div class="showPage" data-id="0">
             <h2 class="titleOfPage">The Great War of Inida</h2>
             <hr>
@@ -214,13 +223,17 @@
             </div>
             <hr>
             <div class="showStats">
-                <div class="reply">
-                    <button class="">
-                        50
+                <div>
+                    <button class="btn btn-light-green Back">Go Back</button>
+                </div>
+                <div class="">
+                    <button href="">
+                        150
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
+                            class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                             <path
-                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                         </svg>
                     </button>
                 </div>
@@ -235,19 +248,16 @@
                         </svg>
                         </a>
                 </div>
-                <div class="">
-                    <button href="">
-                        150
+                <div class="reply">
+                    <button class="">
+                        50
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-eye-fill" viewBox="0 0 16 16">
-                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                            class="bi bi-chat-square-text-fill" viewBox="0 0 16 16">
                             <path
-                                d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.5a1 1 0 0 0-.8.4l-1.9 2.533a1 1 0 0 1-1.6 0L5.3 12.4a1 1 0 0 0-.8-.4H2a2 2 0 0 1-2-2V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
                         </svg>
                     </button>
-
                 </div>
-
             </div>
         </div>
     </section>
