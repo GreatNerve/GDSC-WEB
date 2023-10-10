@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDSC</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/63129298?s=96&v=4">
 </head>
 
 <body>
@@ -14,9 +15,9 @@
             <div class="logo">
                 <h2><a href="" class="nav-items">Anno</a></h2>
             </div>
-            
-            <div class="menu d-flex">
-                <ul>
+
+            <div class="menu d-flex" id="navbararea">
+                <ul class="expd">
                     <li><a href="" class="nav-items">Home</a></li>
                     <li>
                         <a href="" class="nav-items">Catagory</a>
@@ -29,18 +30,36 @@
                     <li><a href="" class="nav-items">My Points</a></li>
                 </ul>
                 <form class="searchBox" role="search">
-                    <input class="" type="search" placeholder="Search" aria-label="Search">
+                    <input class="" type="search" placeholder="Search" aria-label="Search" name="search">
                     <button class="btn btn-light-green" type="submit">Search</button>
                 </form>
             </div>
-                <a href="" class="menu_button">
+                <button class="menu_button">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30 " height="30" fill="currentColor"
                         class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg>
-                </a>
+                </button>
         </nav>
+        <div class="unexpan">
+            <ul class="">
+                <li><a href="" class="nav-items">Home</a></li>
+                <li>
+                    <a href="" class="nav-items">Catagory</a>
+                    <!-- <ul class="sub-menu">
+                        <li><a href="" class="nav-items">About Us</a></li>
+                        <li><a href="" class="nav-items">Our Team</a></li>
+                        <li><a href="" class="nav-items">Our Vision</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="" class="nav-items">My Points</a></li>
+            </ul>
+            <form class="searchBox" role="search">
+                <input class="" type="search" placeholder="Search" aria-label="Search" name="search">
+                <button class="btn btn-light-green" type="submit">Search</button>
+            </form>
+        </div>
     </header>
 
 
@@ -48,7 +67,7 @@
     <section id="HomePage" class="">
         <div class="d-flex">
             <div class="d-inline">
-                <label for="sort_by" class="text-center p-2 pe-0 fw-medium d-inline"> Sort By: </label>
+                <h3 for="myDropdown" class="text-center p-2 pe-0 fw-medium d-inline"> Sort By: </h3>
                 <div class="dropdown" id="sort_by">
                     <button onclick="DROPDOWNFUNTION()" class="dropbtn text-center">Recently
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

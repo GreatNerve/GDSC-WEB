@@ -289,6 +289,7 @@ label {
     align-items: center;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .showStats>div>* {
@@ -371,7 +372,11 @@ label {
     border: 2px solid gray;
 }
 
-
+.unexpan{
+    display: none;
+    opacity: 0;
+    transition: 0.6s ease opacity;
+}
 
 
 @media (max-width: 640px) {
@@ -435,16 +440,46 @@ label {
         text-align: center;
         /* background-color: yellow; */
     }
-    /* .menu{
-        display: block;
-    }
     nav {
+    
         background-color: #e2e3e5cb;
     }
-
-    .menu > ul, .menu > form{
+    .unexpan.show{
         display: block;
+        opacity: 1;
+    }
+    .unexpan{
         position: absolute;
-        float: left;
-    } */
+        z-index: 1000;
+        width: 100%;
+        /* padding-bottom: 2px; */
+    }
+    .unexpan>ul{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        background-color: grey;
+    }
+    .unexpan>ul>li{
+        padding:13px;
+        /* height: 25px; */
+        font-size: 20px;
+
+    }
+    .unexpan>form{
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: grey;
+        padding: 20px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .unexpan>form>*{
+        height: 40px;
+    }
+    .unexpan>form>button{
+        background-color: #2692c5;
+    }
 }
