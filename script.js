@@ -70,9 +70,9 @@ var data = [
     'topics': ['History', 'India'],
     'date': '2021-06-01',
     'author': 'Dheeraj',
-    'likes': 25,
+    'likes': 45,
     'comments': 9,
-    'views': 45,
+    'views': 60,
     'recent': "Autor"
   }
 ];
@@ -354,7 +354,7 @@ $(document).ready(function () {
   alert('If you want to like the fourm you can click on the like button and it will increase the like count.');
   alert('the view is automatically increase when you click on the fourm title.');
   alert('If you want to go back to the home page you can click on the go back button.');
-  alert('it have fully funtional sort button@DS.');
+  alert('it have fully funtional sort button@DS');
   alert('it is full responsive so you can use it on any device.');
 
 
