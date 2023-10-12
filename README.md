@@ -6,6 +6,7 @@
 + If you want to see the fourm you can click on the fourm title and it will show you the fourm with all the details.
 + If you want to go back to the home page you can click on the go back button.
 + If you want to like the fourm you can click on the like button and it will increase the like count.
++ it have fully funtional sort button@DS.
 + The view is automatically increase when you click on the fourm title.
 + It is a single page project so you can not go back to the previous page by clicking on the back button of the browser.
 + It is full responsive so you can use it on any device.
