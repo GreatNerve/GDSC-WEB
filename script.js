@@ -60,7 +60,7 @@ var data = [
     'author': 'Dheeraj',
     'likes': 30,
     'comments': 20,
-    'views': 80,
+    'views': 40,
     'recent': "Autor"
   },
   {
