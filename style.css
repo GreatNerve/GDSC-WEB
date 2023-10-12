@@ -94,7 +94,7 @@ section {
 .dropbtn {
     background-color: var(--bgColor);
     color: var(--textColor);
-    padding: 16px;
+    padding: 6px 15px 15px 15px;
     font-size: 16px;
     border: none;
     cursor: pointer;

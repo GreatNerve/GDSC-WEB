@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GDSC</title>
+    <title>Dheeraj Sharma@GDSC</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/63129298?s=96&v=4">
 </head>
@@ -69,16 +69,20 @@
             <div class="d-inline">
                 <h3 for="myDropdown" class="text-center p-2 pe-0 fw-medium d-inline"> Sort By: </h3>
                 <div class="dropdown" id="sort_by">
-                    <button onclick="DROPDOWNFUNTION()" class="dropbtn text-center">Recently
+                    <button onclick="DROPDOWNFUNTION()" class="dropbtn text-center">
+                        Most Viewed
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path
                                 d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                        </svg></button>
+                        </svg>
+                    </button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="#" class="d-none"> Recently</a>
-                        <a href="#">Most Viewd</a>
-                        <a href="#">Most Liked</a>
+                        <a href="#" class="sortbtn" data-sort="recent" >Most Recently</a>
+                        <a href="#" data-sort="views" class="sortbtn d-none">Most Viewd</a>
+                        <a href="#" data-sort="likes" class="sortbtn">Most Liked</a>
+                        <!-- <a href="#" data-sort="likes" class="sortbtn">comments</a> -->
+                        
                     </div>
                 </div>
             </div>
