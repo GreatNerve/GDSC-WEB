@@ -70,7 +70,7 @@ var data = [
     'topics': ['History', 'India'],
     'date': '2021-06-01',
     'author': 'Dheeraj',
-    'likes': 45,
+    'likes': 25,
     'comments': 9,
     'views': 60,
     'recent': "Autor"
