@@ -19,7 +19,7 @@ window.onclick = function (event) {
 
 var data = [
   {
-    
+
     'id': 0,
     'title': "How to use it and its features",
     'para': `This single Page project have all feature requied for GDSC taks(including 3 page, Adding New fourm, local storage,working like and view counter, and many mor).
@@ -30,7 +30,7 @@ var data = [
     the view is automatically increase when you click on the fourm title.
     it is a single page project so you can not go back to the previous page by clicking on the back button of the browser.
     it is full responsive so you can use it on any device.`,
-    'topics': ['Feature','Guide'],
+    'topics': ['Feature', 'Guide'],
     'date': '2021-06-01',
     'author': 'Dheeraj Sharma',
     'likes': 60,
@@ -39,7 +39,7 @@ var data = [
     'recent': "Autor"
   },
   {
-    
+
     'id': 1,
     'title': "Newton's law of universal gravitation",
     'para': `Newton's law of universal gravitation is usually stated as that every particle attracts every other particle in the universe with a force that is proportional to the product of their masses and inversely proportional to the square of the distance between their centers. The publication of the law has become known as the "first great unification", as it marked the unification of the previously described phenomena of gravity on Earth with known astronomical behaviors.This is a general physical law derived from empirical observations by what Isaac Newton called inductive reasoning. It is a part of classical mechanics and was formulated in Newton's work Philosophiæ Naturalis Principia Mathematica ("the Principia"), first published on 5 July 1687. When Newton presented Book 1 of the unpublished text in April 1686 to the Royal Society, Robert Hooke made a claim that Newton had obtained the inverse square law from him. In today's language, the law states that every point mass attracts every other point mass by a force acting along the line intersecting the two points. The force is proportional to the product of the two masses, and inversely proportional to the square of the distance between them.The equation for universal gravitation thus takes the form: F = G m 1 m 2 r 2 , {\displaystyle F=G{\frac {m_{1}m_{2}}{r^{2}}},} where F is the gravitational force acting between two objects, m1 and m2 are the masses of the objects, r is the distance between the centers of their masses, and G is the gravitational constant. The first test of Newton's law of gravitation between masses in the laboratory was the Cavendish experiment conducted by the British scientist Henry Cavendish in 1798. It took place 111 years after the publication of Newton's Principia and approximately 71 years after his death. Newton's law of gravitation resembles Coulomb's law of electrical forces, which is used to calculate the magnitude of the electrical force arising between two charged bodies. Both are inverse-square laws, where force is inversely proportional to the square of the distance between the bodies. Coulomb's law has charge in place of mass and a different constant. Newton's law has later been superseded by Albert Einstein's theory of general relativity, but the universality of the gravitational constant is intact and the law still continues to be used as an excellent approximation of the effects of gravity in most applications. Relativity is required only when there is a need for extreme accuracy, or when dealing with very strong gravitational fields, such as those found near extremely massive and dense objects, or at small distances (such as Mercury's orbit around the Sun).`,
@@ -112,9 +112,10 @@ function DHEERAJSHARMA(x) {
   </div>
 </a>`;
   $('#form_data').append(content);
+  $('.contentPage').unbind();
   $('.contentPage').click(function (e) {
-    let id = $(this).attr('data-id');
     e.preventDefault();
+    let id = $(this).attr('data-id');
     ShowForm(id);
   });
 
@@ -156,7 +157,8 @@ $("#addPage").submit(function (e) {
     'recent': recent
   };
   data.push(content);
-  DHEERAJSHARMA(id);
+  // DHEERAJSHARMA(id);
+  $('.sortbtn.d-none').click();
   $('#add_page').addClass('d-none');
   $('#HomePage').removeClass('d-none');
   $('html, body').animate({
@@ -179,6 +181,7 @@ function ShowForm(params) {
   data[params]['views'] += 1;
   let Data = data[params];
   // console.log(Data);
+  // alert('Viewed');
   let content = `<div class="showPage" data-id="${Data['id']}">
     <h2 class="titleOfPage">${Data['title']}</h2>
     <hr>
@@ -238,7 +241,7 @@ function ShowForm(params) {
   $('#HomePage').addClass('d-none');
   $('.Back').click(function (e) {
     e.preventDefault();
-  $('.sortbtn.d-none').click();
+    $('.sortbtn.d-none').click();
 
     $('#sPage').addClass('d-none');
     $('#HomePage').removeClass('d-none');
@@ -302,40 +305,42 @@ $('.BackHome').click(function (e) {
 
 $(document).ready(function () {
 
-  $('.sortbtn').click(function (e){
+  $('.sortbtn').click(function (e) {
     e.preventDefault;
     let SortedData = [...data];
     let sort = $(this).attr('data-sort');
-    if(sort == 'views'){
-      SortedData.sort(function(a, b){return b.views - a.views});
-    }else if(sort == 'likes'){
-      SortedData.sort(function(a, b){return b.likes - a.likes});
+    if (sort == 'views') {
+      SortedData.sort(function (a, b) { return b.views - a.views });
+    } else if (sort == 'likes') {
+      SortedData.sort(function (a, b) { return b.likes - a.likes });
     }
     // else if(sort == 'comments'){
     //   SortedData.sort(function(a, b){return b.comments - a.comments});
     // }
-    else if(sort == 'recent'){
-      SortedData.sort(function(a, b){return b.id - a.id});
+    else if (sort == 'recent') {
+      SortedData.sort(function (a, b) { return b.id - a.id });
     }
     $('#form_data').empty();
     for (let index = 0; index < SortedData.length; index++) {
       DHEERAJSHARMA(SortedData[index]['id']);
-  
+
     }
-    if(!($(this).hasClass('d-none'))){
+    if (!($(this).hasClass('d-none'))) {
       $('.dropbtn').html(`Most ${sort.charAt(0).toUpperCase() + sort.slice(1)}
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
           class="bi bi-caret-down-fill" viewBox="0 0 16 16">
           <path
               d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
       </svg>`)
-      alert('Sorted by Most '+sort.charAt(0).toUpperCase() + sort.slice(1))
+      alert('Sorted by Most ' + sort.charAt(0).toUpperCase() + sort.slice(1))
     }
     $('.sortbtn').removeClass('d-none');
-    console.log(data);
+    // console.log(data);
     $(this).addClass('d-none');
 
   });
+
+
 
 
 
@@ -348,15 +353,15 @@ $(document).ready(function () {
 
   $('#form_data').empty();
   $('.sortbtn.d-none').click();
-  alert("Welcome to my website!, I am Dheeraj Sharma");
-  alert('If you want to see the fourm you can click on the fourm title and it will show you the fourm with all the details.');
-  alert('If you want to add new fourm you can click on the add new fourm button on the top right corner of the page and fill the form and submit it.');
-  alert('If you want to like the fourm you can click on the like button and it will increase the like count.');
-  alert('the view is automatically increase when you click on the fourm title.');
-  alert('If you want to go back to the home page you can click on the go back button.');
-  alert('it have fully funtional sort button@DS');
-  alert('it is full responsive so you can use it on any device.');
+  // alert("Welcome to my website!, I am Dheeraj Sharma");
+  // alert('If you want to see the fourm you can click on the fourm title and it will show you the fourm with all the details.');
+  // alert('If you want to add new fourm you can click on the add new fourm button on the top right corner of the page and fill the form and submit it.');
+  // alert('If you want to like the fourm you can click on the like button and it will increase the like count.');
+  // alert('the view is automatically increase when you click on the fourm title.');
+  // alert('If you want to go back to the home page you can click on the go back button.');
+  // alert('it have fully funtional sort button@DS');
+  // alert('it is full responsive so you can use it on any device.');
 
 
- 
+
 });
